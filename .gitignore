@@ -1,0 +1,2 @@
+#Ignorando o Arquivo ENV com informações do Banco de Dados
+.env
