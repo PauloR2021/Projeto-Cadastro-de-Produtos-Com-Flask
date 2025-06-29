@@ -22,6 +22,10 @@ mysql = MySQL(app)
 def index():
     return render_template('index.html')
 
+@app.route("/cadastro")
+def formulario():
+    return render_template('formulario.html')
+
 
 if __name__ == '__main__':
     app.run(debug=True)
