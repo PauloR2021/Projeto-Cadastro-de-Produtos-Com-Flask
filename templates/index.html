@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>StockSys - Sistema de Estoque</title>
+    <link rel="stylesheet" href="/static/style_index.css">
 </head>
 <body>
     <header>
@@ -24,6 +25,15 @@
         <p>
             Este projeto foi desenvolvido como parte de um dentro do Python com o Flask.
         </p>
+        {% with mensagens = get_flashed_messages() %}
+            {% if mensagens %}
+                <ul class="mensagens">
+                {% for msg in mensagens %}
+                    <li>{{ msg }}</li>
+                {% endfor %}
+                </ul>
+            {% endif %}
+        {% endwith %}
     </main>
     <footer style="text-align: center; font-size: 14px; color: #777; margin-top: 20px;">
         <p>&copy; 2025 Sistema de Produtos com Flask. Todos os direitos reservados.</p>
