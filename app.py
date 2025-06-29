@@ -17,7 +17,10 @@ app.config['MYSQL_DB'] = os.getenv("MYSQL_DB")
 
 mysql = MySQL(app)
 
-print(mysql)
+# Criando o Método para chamar a Tela Principal do Projeto
+@app.route("/")
+def index():
+    return render_template('index.html')
 
 
 if __name__ == '__main__':
