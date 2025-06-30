@@ -3,18 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/style_cadastro.css">
     <title>StockSys - Sistema de Estoque - Cadastro</title>
 </head>
 <body>
-    <header>
-        <div class="container-menu">
+    <header class="cabecalho">
+        <div class="nav-buttons">
             <a href="/">Início</a>
-            
+            <a href="/">Consultar</a>
+          
         </div>
     </header>
     <main>
-        <h2>Cadastrar Produto</h2>
-        <div class="formulario">
+        <h1>Cadastrar Produto</h1>
+        <div class="container">
             <form action="/cadastrar" method="POST">
                 <label for="nome">Nome do Produto: </label>
                 <input type="text" id="nome" name="nome" required autocomplete="off">
@@ -29,7 +31,7 @@
                 <input type="text" id="valor-produto" name="valor-produto" placeholder="R$ 00,00" required autocomplete="off">
 
                 <label for="valor-revenda">Valor da Revenda: </label>
-                <input type="text" id="valor-revenda" name="valor-revenda" placeholder="R$ 00,00" required> autocomplete="off"
+                <input type="text" id="valor-revenda" name="valor-revenda" placeholder="R$ 00,00" required autocomplete="off"> 
 
                 <label for="uni">Unidade: </label>
                 <select name="unidade" id="unidade">
